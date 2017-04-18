@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SCPageControl_Example' do
+  pod 'SCPageControl', :path => '../'
+
+  target 'SCPageControl_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
