@@ -9,7 +9,15 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+
 ## Requirements
+```
+* Swift 3.0.1
+* XCode 8.3.1
+* iOS 9.0 (Min SDK)
+* Not Use Autolayout
+```
+
 
 ## Installation
 
@@ -20,9 +28,34 @@ it, simply add the following line to your Podfile:
 pod "SCPageControl"
 ```
 
-## Author
+##How To Use
 
-myoung, myoungsc.dev@gmail.com
+```Swift
+let sc = SCPageControlView()
+
+override func viewDidLoad() {
+    super.viewDidLoad()
+
+	sc.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height-50, width: UIScreen.main.bounds.size.width, height: 50)
+	sc.backgroundColor = UIColor.white
+	sc.set_view(5, current: 0, tint_color: UIColor.red)
+	view.addSubview(sc)
+}
+
+//MARK: ScrollView Delegate
+func scrollViewDidScroll(_ scrollView: UIScrollView) {
+	sc.scroll_did(scrollView)
+}
+
+```
+
+
+## Author
+myoung
+
+[HomePage](http://devsc.tistory.com)
+
+<myoungsc.dev@gmail.com>
 
 ## License
 
