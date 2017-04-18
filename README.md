@@ -5,10 +5,12 @@
 [![License](https://img.shields.io/cocoapods/l/SCPageControl.svg?style=flat)](http://cocoapods.org/pods/SCPageControl)
 [![Platform](https://img.shields.io/cocoapods/p/SCPageControl.svg?style=flat)](http://cocoapods.org/pods/SCPageControl)
 
-## Example
+## Install
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+## ScreenShot
+![](https://github.com/myoungsc/SCPageControl/blob/master/SCPageControl.gif)
 
 ## Requirements
 ```
@@ -28,7 +30,7 @@ it, simply add the following line to your Podfile:
 pod "SCPageControl"
 ```
 
-##How To Use
+## How To Use
 
 ```Swift
 let sc = SCPageControlView()
