@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SCPageControl'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'SCPageControl is pagecontrol'
   s.description      = 'A short description of SCPageControl. It animation'
 
