@@ -25,13 +25,13 @@ import UIKit
         super.layoutSubviews()
     }
     
+    // ## view init method ##
     public func set_view(_ page: Int, current: Int, tint_color: UIColor) {
         
         numberOfPage = page
         currentOfPage = current
         
         let f_all_width: CGFloat = CGFloat((numberOfPage-1)*20 + 25)
-        
         
         guard f_all_width < self.frame.size.width else {
             print("frame.Width over Number Of Page")
@@ -63,6 +63,23 @@ import UIKit
         }
         
     }
+    
+    // ## Call the moment in rotate Device ##
+    public func set_rotateDevice() {
+        
+        let f_all_width: CGFloat = CGFloat((numberOfPage-1)*20 + 25)
+        var f_x: CGFloat = (self.frame.size.width-f_all_width)/2.0
+        
+        f_start_point = f_x
+        
+        for subview in self.subviews {
+            if subview.isKind(of: UIImageView.classForCoder()) {
+                subview.frame.origin.x = f_x
+                f_x += subview.frame.size.width + 10
+            }
+        }
+    }
+    
     
     open func scroll_did(_ scrollView: UIScrollView) {
         

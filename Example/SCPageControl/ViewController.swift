@@ -14,13 +14,30 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var sc_main: UIScrollView!
     @IBOutlet weak var ScPageControl: SCPageControlView!
         
-    let screenWidth : CGFloat = UIScreen.main.bounds.size.width
-    let screenHeight : CGFloat = UIScreen.main.bounds.size.height
+    var screenWidth : CGFloat = UIScreen.main.bounds.size.width
+    var screenHeight : CGFloat = UIScreen.main.bounds.size.height
     
     let arr_color: [UIColor] = [UIColor.red, UIColor.blue, UIColor.yellow, UIColor.purple, UIColor.brown]
+    var previousDeviceOrientation: UIDeviceOrientation = UIDevice.current.orientation
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector:  #selector(deviceDidRotate),
+            name: .UIDeviceOrientationDidChange,
+            object: nil
+        )        
+        init_view()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    //MARK: ## view init ##
+    func init_view() {
         
         sc_main.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
         sc_main.delegate = self
@@ -38,8 +55,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         }
         
         
-        //SCPageControlView Setting Value
-        
+        //## SCPageControlView Setting Value ##
         //set_view Function
         //First parameter is Page Count
         //Seconde Parameter is Start Page
@@ -49,15 +65,38 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    //MARK: ***** ScrollView Delegate *****
+    //MARK: ## ScrollView Delegate ##
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         //Added as required
         ScPageControl.scroll_did(scrollView)
     }
-
+    
+    // ## Moment in rotate Device ##
+    // Only when not use AutoLayout
+    func deviceDidRotate() {
+        
+        if UIDevice.current.orientation == previousDeviceOrientation { return }
+        previousDeviceOrientation = UIDevice.current.orientation
+        
+        print(UIScreen.main.bounds.size.width)
+        
+        screenWidth = UIScreen.main.bounds.size.width
+        screenHeight = UIScreen.main.bounds.size.height
+        
+        var f_x: CGFloat = 0.0
+        for subview in sc_main.subviews {
+            if subview.isKind(of: UILabel.classForCoder()) {
+                print(subview)
+                subview.frame = CGRect(x: f_x, y: 0, width: screenWidth, height: screenHeight)
+                f_x += screenWidth
+            }
+        }
+        
+        sc_main.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
+        sc_main.contentSize = CGSize(width: screenWidth*5.0, height: screenHeight)
+        
+        ScPageControl.frame = CGRect(x: 0, y: screenHeight-50, width: screenWidth, height: 50)
+        ScPageControl.set_rotateDevice()
+    }
+  
 }
-
