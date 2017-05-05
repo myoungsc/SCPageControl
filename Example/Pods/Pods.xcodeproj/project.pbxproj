@@ -17,6 +17,10 @@
 		CB18E3CBEFF3D921FC6806881B0A0BBB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		CCFA2F189EABC8429B198A4AC9C126BB /* SCPageControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 266B236871675B6B0073C5CD470FCC64 /* SCPageControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4189F641EA5063A00064277 /* SCPageControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4189F631EA5063A00064277 /* SCPageControlView.swift */; };
+		E4762E561EB8AD75004E8249 /* SCP_SCJAFlatBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4762E551EB8AD75004E8249 /* SCP_SCJAFlatBar.swift */; };
+		E485F8681EB6196E00343F74 /* SCP_SCJAMoveCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E485F8671EB6196E00343F74 /* SCP_SCJAMoveCircle.swift */; };
+		E4AF07731EB75DA600F43FDA /* SCP_SCJAFillCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF07721EB75DA600F43FDA /* SCP_SCJAFillCircle.swift */; };
+		E4CD41A01EB23160005AAE80 /* SCP_SCNormal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CD419F1EB23160005AAE80 /* SCP_SCNormal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,10 @@
 		E06C2281B20C5AFED57B6813944F304D /* Pods-SCPageControl_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SCPageControl_Tests-resources.sh"; sourceTree = "<group>"; };
 		E3E6FCC6199108B787B90DE7C48327B3 /* SCPageControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCPageControl-prefix.pch"; sourceTree = "<group>"; };
 		E4189F631EA5063A00064277 /* SCPageControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPageControlView.swift; sourceTree = "<group>"; };
+		E4762E551EB8AD75004E8249 /* SCP_SCJAFlatBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCP_SCJAFlatBar.swift; sourceTree = "<group>"; };
+		E485F8671EB6196E00343F74 /* SCP_SCJAMoveCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCP_SCJAMoveCircle.swift; sourceTree = "<group>"; };
+		E4AF07721EB75DA600F43FDA /* SCP_SCJAFillCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCP_SCJAFillCircle.swift; sourceTree = "<group>"; };
+		E4CD419F1EB23160005AAE80 /* SCP_SCNormal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCP_SCNormal.swift; sourceTree = "<group>"; };
 		EB0A22B7EED016DBC5289862154861C6 /* Pods-SCPageControl_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SCPageControl_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		EBD837FB554F7EA6AA82FF3A2AC02A46 /* Pods-SCPageControl_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SCPageControl_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +137,7 @@
 		6064CB688E999005A3C914F8769C4ABC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E4CD41A11EB238C4005AAE80 /* ModalToStyle */,
 				E4189F631EA5063A00064277 /* SCPageControlView.swift */,
 			);
 			path = Classes;
@@ -192,6 +201,17 @@
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		E4CD41A11EB238C4005AAE80 /* ModalToStyle */ = {
+			isa = PBXGroup;
+			children = (
+				E4CD419F1EB23160005AAE80 /* SCP_SCNormal.swift */,
+				E485F8671EB6196E00343F74 /* SCP_SCJAMoveCircle.swift */,
+				E4AF07721EB75DA600F43FDA /* SCP_SCJAFillCircle.swift */,
+				E4762E551EB8AD75004E8249 /* SCP_SCJAFlatBar.swift */,
+			);
+			name = ModalToStyle;
 			sourceTree = "<group>";
 		};
 		F834D25CEE17D9005668471B44D6DA9C /* SCPageControl */ = {
@@ -351,7 +371,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4189F641EA5063A00064277 /* SCPageControlView.swift in Sources */,
+				E4CD41A01EB23160005AAE80 /* SCP_SCNormal.swift in Sources */,
+				E485F8681EB6196E00343F74 /* SCP_SCJAMoveCircle.swift in Sources */,
 				7412C0652C75D8DCE09208E9D6BC30E6 /* SCPageControl-dummy.m in Sources */,
+				E4AF07731EB75DA600F43FDA /* SCP_SCJAFillCircle.swift in Sources */,
+				E4762E561EB8AD75004E8249 /* SCP_SCJAFlatBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

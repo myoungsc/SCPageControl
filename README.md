@@ -1,13 +1,11 @@
 # SCPageControl
-
 [![CI Status](http://img.shields.io/travis/myoung/SCPageControl.svg?style=flat)](https://travis-ci.org/myoung/SCPageControl)
 [![Version](https://img.shields.io/cocoapods/v/SCPageControl.svg?style=flat)](http://cocoapods.org/pods/SCPageControl)
 [![License](https://img.shields.io/cocoapods/l/SCPageControl.svg?style=flat)](http://cocoapods.org/pods/SCPageControl)
 [![Platform](https://img.shields.io/cocoapods/p/SCPageControl.svg?style=flat)](http://cocoapods.org/pods/SCPageControl)
 
 ## Description
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Scrolling A page control that moves in sync with the page movement distance.
 
 ## ScreenShot
 ![](https://github.com/myoungsc/SCPageControl/blob/master/SCPageControl.gif)
@@ -20,26 +18,33 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 * Not Use Autolayout
 ```
 
-
 ## Installation
-
 SCPageControl is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod "SCPageControl"
+
+//After
+pod install
 ```
 
 ## How To Use
-
 ```Swift
+public enum SCPageStyle: Int {
+	case SCNormal = 100
+    case SCJAMoveCircle // Design by Jardson Almeida
+    case SCJAFillCircle // Design by Jardson Almeida
+    case SCJAFlatBar // Design by Jardson Almeida
+}
+
 let sc = SCPageControlView()
 
 override func viewDidLoad() {
     super.viewDidLoad()
 
 	sc.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height-50, width: UIScreen.main.bounds.size.width, height: 50)
-	sc.backgroundColor = UIColor.white
+	sc.scp_style = .SCNormal
 	sc.set_view(5, current: 0, tint_color: UIColor.red)
 	view.addSubview(sc)
 }
@@ -59,6 +64,15 @@ myoung
 
 <myoungsc.dev@gmail.com>
 
-## License
+## Design And Help
+```
+SCJA series Design is "Jardson Almeida", e-mail is hello@jardsonalmeida.com"
+```
 
+```
+Algorithm Help
+Jangbyeonghui to PeopleRoad
+```
+
+## License
 SCPageControl is available under the MIT license. See the LICENSE file for more info.

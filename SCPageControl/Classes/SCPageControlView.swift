@@ -10,8 +10,19 @@ import UIKit
 
 @IBDesignable public class SCPageControlView: UIView {
     
+    public enum SCPageStyle: Int {
+        case SCNormal = 100
+        case SCJAMoveCircle // Design by Jardson Almeida
+        case SCJAFillCircle // Design by Jardson Almeida
+        case SCJAFlatBar // Design by Jardson Almeida
+        
+    }
+    
+    public var scp_style: SCPageStyle = .SCNormal
+    
     var numberOfPage: Int = 0, currentOfPage: Int = 0
     var f_start_point: CGFloat = 0.0, f_start: CGFloat = 0.0
+    
     
     public required init(coder aDecoder: NSCoder) {
         super.init(coder:aDecoder)!
@@ -25,97 +36,70 @@ import UIKit
         super.layoutSubviews()
     }
     
-    // ## view init method ##
-    public func set_view(_ page: Int, current: Int, tint_color: UIColor) {
-        
-        numberOfPage = page
-        currentOfPage = current
-        
-        let f_all_width: CGFloat = CGFloat((numberOfPage-1)*20 + 25)
-        
-        guard f_all_width < self.frame.size.width else {
-            print("frame.Width over Number Of Page")
-            return
-        }
-        
-        var f_width: CGFloat = 10.0, f_height: CGFloat = 10.0
-        var f_x: CGFloat = (self.frame.size.width-f_all_width)/2.0, f_y: CGFloat = (self.frame.size.height-f_height)/2.0
-        
-        f_start_point = f_x
-        
-        for i in 0 ..< numberOfPage {
-            let img_page = UIImageView()
-            
-            if i == currentOfPage {
-                f_width = 25.0
-                img_page.alpha = 1.0
-            } else {
-                f_width = 10.0
-                img_page.alpha = 0.4
-            }
-            img_page.frame = CGRect(x: f_x, y: f_y, width: f_width, height: f_height)
-            img_page.layer.cornerRadius = img_page.frame.size.height/2.0
-            img_page.backgroundColor = tint_color
-            img_page.tag = i+10
-            self.addSubview(img_page)
-            
-            f_x += 10+f_width
-        }
-        
-    }
-    
-    // ## Call the moment in rotate Device ##
-    public func set_rotateDevice() {
-        
-        let f_all_width: CGFloat = CGFloat((numberOfPage-1)*20 + 25)
-        var f_x: CGFloat = (self.frame.size.width-f_all_width)/2.0
-        
-        f_start_point = f_x
-        
-        for subview in self.subviews {
-            if subview.isKind(of: UIImageView.classForCoder()) {
-                subview.frame.origin.x = f_x
-                f_x += subview.frame.size.width + 10
-            }
+    //MARK: ## view init method ##
+    public func set_view(_ page: Int, current: Int, tint_color: UIColor) {        
+        switch scp_style {
+        case .SCJAMoveCircle:
+            let scp_scjamovecircle = SCP_SCJAMoveCircle(frame: self.bounds)
+            scp_scjamovecircle.tag = scp_style.rawValue
+            scp_scjamovecircle.set_view(page, current: current, tint_color: tint_color)
+            self.addSubview(scp_scjamovecircle)
+        case .SCJAFillCircle:
+            let scp_scjafillcircle = SCP_SCJAFillCircle(frame: self.bounds)
+            scp_scjafillcircle.tag = scp_style.rawValue
+            scp_scjafillcircle.set_view(page, current: current, tint_color: tint_color)
+            self.addSubview(scp_scjafillcircle)
+        case .SCJAFlatBar:
+            let scp_scjaflatbar = SCP_SCJAFlatBar(frame: self.bounds)
+            scp_scjaflatbar.tag = scp_style.rawValue
+            scp_scjaflatbar.set_view(page, current: current, tint_color: tint_color)
+            self.addSubview(scp_scjaflatbar)
+        default: //.SCNormal
+            let scp_normal = SCP_SCNormal(frame: self.bounds)
+            scp_normal.tag = scp_style.rawValue
+            scp_normal.set_view(page, current: current, tint_color: tint_color)
+            self.addSubview(scp_normal)
         }
     }
     
+    //MARK: ## Call the moment in rotate Device ##
+    public func set_rotateDevice() {        
+        switch scp_style {
+        case .SCJAMoveCircle:
+            let scp_scjamovecircle = self.viewWithTag(scp_style.rawValue) as! SCP_SCJAMoveCircle
+            scp_scjamovecircle.set_rotateDevice(self.bounds)
+        case .SCJAFillCircle:
+            let scp_scjafillcircle = self.viewWithTag(scp_style.rawValue) as! SCP_SCJAFillCircle
+            scp_scjafillcircle.set_rotateDevice(self.bounds)
+        case .SCJAFlatBar:
+            let scp_scjaflatbar = self.viewWithTag(scp_style.rawValue) as! SCP_SCJAFlatBar
+            scp_scjaflatbar.set_rotateDevice(self.bounds)
+        default: //.SCNormal
+            let scp_normal = self.viewWithTag(scp_style.rawValue) as! SCP_SCNormal
+            scp_normal.set_rotateDevice(self.bounds)
+        }
+    }
     
+    //MARK: ## ScrollView move method ##
     open func scroll_did(_ scrollView: UIScrollView) {
-        
-        let f_page = scrollView.contentOffset.x / scrollView.frame.size.width
-        
-        let tag_value = get_imgView_tag(f_page)+10
-        let f_next_start: CGFloat = (CGFloat(tag_value-10) * scrollView.frame.size.width)
-        
-        let f_move: CGFloat = (15*(f_start-scrollView.contentOffset.x)/scrollView.frame.size.width)
-        let f_alpha: CGFloat = (0.6*(scrollView.contentOffset.x-f_next_start)/scrollView.frame.size.width)
-        
-        if let iv_page: UIImageView = self.viewWithTag(tag_value) as? UIImageView, tag_value >= 10 && tag_value+1 < 10+numberOfPage {
-            
-            iv_page.frame = CGRect(x: f_start_point+((CGFloat(tag_value)-10)*20),
-                                   y: iv_page.frame.origin.y,
-                                   width: 25+(f_move+((CGFloat(tag_value)-10)*15)),
-                                   height: iv_page.frame.size.height)
-            iv_page.alpha = 1-f_alpha
-            
-            let iv_page_next = self.viewWithTag(tag_value+1) as! UIImageView
-            let f_page_next_x: CGFloat = ((f_start_point+35)+((CGFloat(tag_value)-10)*20))
-            
-            iv_page_next.frame = CGRect(x: f_page_next_x+(f_move+((CGFloat(tag_value)-10)*15)),
-                                        y: iv_page_next.frame.origin.y,
-                                        width: 10-(f_move+((CGFloat(tag_value)-10)*15)),
-                                        height: iv_page_next.frame.size.height)
-            iv_page_next.alpha = 0.4+f_alpha
+        switch scp_style {
+        case .SCJAMoveCircle:
+            if let scp: SCP_SCJAMoveCircle = self.viewWithTag(scp_style.rawValue) as? SCP_SCJAMoveCircle {
+                scp.scroll_did(scrollView)
+            }
+        case .SCJAFillCircle:
+            if let scp: SCP_SCJAFillCircle = self.viewWithTag(scp_style.rawValue) as? SCP_SCJAFillCircle {
+                scp.scroll_did(scrollView)
+            }
+        case .SCJAFlatBar:
+            if let scp: SCP_SCJAFlatBar = self.viewWithTag(scp_style.rawValue) as? SCP_SCJAFlatBar {
+                scp.scroll_did(scrollView)
+            }
+        default: //.SCNormal
+            if let scp: SCP_SCNormal = self.viewWithTag(scp_style.rawValue) as? SCP_SCNormal {
+                scp.scroll_did(scrollView)
+            }            
         }
     }
-    
-    
-    func get_imgView_tag(_ f_page: CGFloat) -> Int {
-        let f_temp = f_page - 0.02
-        return Int(f_temp)
-    }
-
-    
     
 }
