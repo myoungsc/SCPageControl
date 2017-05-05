@@ -8,7 +8,7 @@
 Scrolling A page control that moves in sync with the page movement distance.
 
 ## ScreenShot
-![](https://github.com/myoungsc/SCPageControl/blob/master/SCPageControl.gif)
+![](https://github.com/myoungsc/SCPageControl/blob/master/ScreenShot/SCPageControl.gif)
 
 ## Requirements
 ```
@@ -32,7 +32,7 @@ pod install
 ## How To Use
 ```Swift
 public enum SCPageStyle: Int {
-	case SCNormal = 100
+    case SCNormal = 100
     case SCJAMoveCircle // Design by Jardson Almeida
     case SCJAFillCircle // Design by Jardson Almeida
     case SCJAFlatBar // Design by Jardson Almeida
@@ -66,7 +66,7 @@ myoung
 
 ## Design And Help
 ```
-SCJA series Design is "Jardson Almeida", e-mail is hello@jardsonalmeida.com"
+SCJA series Design is "Jardson Almeida", e-mail is "hello@jardsonalmeida.com"
 ```
 
 ```
