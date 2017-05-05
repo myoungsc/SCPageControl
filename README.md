@@ -8,8 +8,7 @@
 Scrolling A page control that moves in sync with the page movement distance.
 
 ## ScreenShot
-![](https://github.com/myoungsc/SCPageControl/blob/master/ScreenShot/SCPageControl.gif)![](https://github.com/myoungsc/SCPageControl/blob/master/ScreenShot/SCJAFillCircle.gif)
-![](https://github.com/myoungsc/SCPageControl/blob/master/ScreenShot/SCJAFlatBar.gif)![](https://github.com/myoungsc/SCPageControl/blob/master/ScreenShot/SCJAMoveCircle.gif)
+![](https://github.com/myoungsc/SCPageControl/blob/master/ScreenShot/SCPageControl.gif)
 
 ## Requirements
 ```
