@@ -31,6 +31,8 @@ pod install
 
 ## How To Use
 ```Swift
+import SCPageControl
+
 public enum SCPageStyle: Int {
     case SCNormal = 100
     case SCJAMoveCircle // Design by Jardson Almeida
