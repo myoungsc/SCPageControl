@@ -23,7 +23,12 @@ SCPageControl is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
+//Swift 4.0
 pod "SCPageControl"
+
+//Swift 3.0
+pod "SCPageControl", '~> 0.1.3'
+
 
 //After
 pod install

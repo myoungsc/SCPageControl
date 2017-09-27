@@ -94,7 +94,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     // ## Moment in rotate Device ##
     // Only when not use AutoLayout
-    func deviceDidRotate() {
+    @objc func deviceDidRotate() {
         
         if UIDevice.current.orientation == previousDeviceOrientation { return }
         previousDeviceOrientation = UIDevice.current.orientation
@@ -126,8 +126,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         SCP_SCJAFlatBar.frame = CGRect(x: 0, y: screenHeight-200, width: screenWidth, height: 50)
         SCP_SCJAFlatBar.set_rotateDevice()
         
-        sc_main.scrollRectToVisible(CGRect(x: sc_main.frame.size.width*f_page, y: 0, width:  sc_main.frame.size.width, height:  sc_main.frame.size.height), animated: true)
-        
+        sc_main.scrollRectToVisible(CGRect(x: sc_main.frame.size.width*f_page, y: 0, width:  sc_main.frame.size.width, height:  sc_main.frame.size.height), animated: true)        
     }
   
 }

@@ -57,7 +57,10 @@ class SCP_SCJAMoveCircle: UIView {
         
         f_start_point = f_x
         
-        view_img.frame = CGRect(x: -(CGFloat(current) * 20), y: 0, width: self.frame.size.width, height: self.frame.size.height)
+        view_img.frame = CGRect(x: -(CGFloat(current) * 20),
+                                y: 0,
+                                width: self.frame.size.width,
+                                height: self.frame.size.height)
         view_img.backgroundColor = .clear
         self.addSubview(view_img)
         
@@ -90,7 +93,8 @@ class SCP_SCJAMoveCircle: UIView {
         let f_move: CGFloat = (20*(f_start-scrollView.contentOffset.x)/scrollView.frame.size.width)
         let f_alpha: CGFloat = (0.6*(scrollView.contentOffset.x-f_next_start)/scrollView.frame.size.width)
         
-        if let iv_page: UIImageView = view_img.viewWithTag(tag_value) as? UIImageView, tag_value >= 10 && tag_value+1 < numberOfPage+10 {
+        if let iv_page: UIImageView = view_img.viewWithTag(tag_value) as? UIImageView,
+            tag_value >= 10 && tag_value+1 < numberOfPage+10 {
             
             view_img.frame.origin.x = 0 + f_move
             iv_page.alpha = 1-f_alpha

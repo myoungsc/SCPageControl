@@ -74,7 +74,8 @@ class SCP_SCNormal: UIView {
         let f_move: CGFloat = (15*(f_start-scrollView.contentOffset.x)/scrollView.frame.size.width)
         let f_alpha: CGFloat = (0.6*(scrollView.contentOffset.x-f_next_start)/scrollView.frame.size.width)
         
-        if let iv_page: UIImageView = self.viewWithTag(tag_value) as? UIImageView, tag_value >= 10 && tag_value+1 < 10+numberOfPage {
+        if let iv_page: UIImageView = self.viewWithTag(tag_value) as? UIImageView,
+            tag_value >= 10 && tag_value+1 < 10+numberOfPage {
             
             iv_page.frame = CGRect(x: f_start_point+((CGFloat(tag_value)-10)*20),
                                    y: iv_page.frame.origin.y,

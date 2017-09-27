@@ -72,7 +72,8 @@ class SCP_SCJAFillCircle: UIView {
         let f_border_width = (f_circle/2.0)-1.0
         let f_border: CGFloat = (f_border_width*(scrollView.contentOffset.x-f_next_start)/scrollView.frame.size.width)
         
-        if let iv_page: UIImageView = self.viewWithTag(tag_value) as? UIImageView, tag_value >= 10 && tag_value+1 < numberOfPage+10 {
+        if let iv_page: UIImageView = self.viewWithTag(tag_value) as? UIImageView,
+            tag_value >= 10 && tag_value+1 < numberOfPage+10 {
             iv_page.layer.borderWidth = (f_circle/2.0)-f_border
             
             if let iv_page_next: UIImageView = self.viewWithTag(tag_value+1) as? UIImageView {
