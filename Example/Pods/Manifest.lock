@@ -1,5 +1,5 @@
 PODS:
-  - SCPageControl (0.1.0)
+  - SCPageControl (0.2.0)
 
 DEPENDENCIES:
   - SCPageControl (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SCPageControl: 3bee00b168432e44eef2898052b5dac648b70c21
+  SCPageControl: d6d4092e93299eb5bb007c49f6164e9299a4093a
 
 PODFILE CHECKSUM: 6d2c65adf813605c75e18cf4832f5ee45c35e390
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1
