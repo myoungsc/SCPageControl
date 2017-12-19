@@ -20,6 +20,12 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     var screenWidth : CGFloat = UIScreen.main.bounds.size.width
     var screenHeight : CGFloat = UIScreen.main.bounds.size.height
     
+    let arrImg: [UIImage] = [UIImage(named: "sc0.jpg")!,
+                             UIImage(named: "sc1.jpg")!,
+                             UIImage(named: "sc2.jpg")!,
+                             UIImage(named: "sc3.jpg")!,
+                             UIImage(named: "sc4.jpg")!]
+    
     let arr_color: [UIColor] = [UIColor.red, UIColor.blue, UIColor.green, UIColor.purple, UIColor.brown]
     var previousDeviceOrientation: UIDeviceOrientation = UIDevice.current.orientation
     
@@ -49,6 +55,13 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         //sc_main.contentOffset = CGPoint(x: sc_main.frame.size.width, y: 0) //<- Only Start Page Not first Page
         
         for i in 0 ..< Int(sc_main.contentSize.width/screenWidth) {
+            
+            let ivImage = UIImageView(frame: CGRect(x: screenWidth*CGFloat(i), y: 0, width: screenWidth, height: screenHeight-200))
+            ivImage.image = arrImg[i]
+            ivImage.contentMode = .scaleAspectFill
+            ivImage.clipsToBounds = true
+            sc_main.addSubview(ivImage)
+            
             let lb_title = UILabel(frame: CGRect(x: screenWidth*CGFloat(i), y: 100, width: screenWidth, height: 100))
             lb_title.text = "\(i+1) Page"
             lb_title.textAlignment = .center
