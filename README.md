@@ -62,18 +62,6 @@ func scrollViewDidScroll(_ scrollView: UIScrollView) {
 }
 ```
 
-``` Swift
-//if you use autolayout, initial SCPageControll in ViewDidLayoutSubviews Method
-override func viewDidLayoutSubviews() {
-    super.viewDidLayoutSubviews()
-    /*
-     sc.frame = ScPageControl.frame
-     sc.scp_style = .SCNormal
-     sc.set_view(Int(sc_main.contentSize.width/screenWidth), current: 0, tint_color: .red)
-     */
-}
-```
-
 
 ## Author
 myoung
