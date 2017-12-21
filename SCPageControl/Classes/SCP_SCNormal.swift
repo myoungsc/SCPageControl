@@ -13,6 +13,9 @@ class SCP_SCNormal: UIView {
     var numberOfPage: Int = 0, currentOfPage: Int = 0
     var f_start_point: CGFloat = 0.0, f_start: CGFloat = 0.0
     
+    var screenWidth : CGFloat = UIScreen.main.bounds.size.width
+    var screenHeight : CGFloat = UIScreen.main.bounds.size.height
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder:aDecoder)!
     }
@@ -37,6 +40,8 @@ class SCP_SCNormal: UIView {
             print("frame.Width over Number Of Page")
             return
         }
+        
+        
         
         var f_width: CGFloat = 10.0, f_height: CGFloat = 10.0
         var f_x: CGFloat = (self.frame.size.width-f_all_width)/2.0, f_y: CGFloat = (self.frame.size.height-f_height)/2.0
