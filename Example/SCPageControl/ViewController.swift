@@ -45,6 +45,16 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         super.didReceiveMemoryWarning()
     }
     
+    //if you use autolayout, initial SCPageControll in ViewDidLayoutSubviews Method
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        /*
+         ScPageControl.frame = ScPageControl.frame
+         ScPageControl.scp_style = .SCNormal
+         ScPageControl.set_view(Int(sc_main.contentSize.width/screenWidth), current: 0, tint_color: .red)
+         */
+    }
+    
     //MARK: ## view init ##
     func init_view() {
         
