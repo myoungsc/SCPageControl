@@ -41,8 +41,6 @@ class SCP_SCNormal: UIView {
             return
         }
         
-        
-        
         var f_width: CGFloat = 10.0, f_height: CGFloat = 10.0
         var f_x: CGFloat = (self.frame.size.width-f_all_width)/2.0, f_y: CGFloat = (self.frame.size.height-f_height)/2.0
         

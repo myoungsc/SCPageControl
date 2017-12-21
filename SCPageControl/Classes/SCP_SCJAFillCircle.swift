@@ -40,7 +40,7 @@ class SCP_SCJAFillCircle: UIView {
         }
         
         f_circle = 10.0
-        var f_x: CGFloat = ((self.frame.size.width-f_circle)/2.0) + 5, f_y: CGFloat = (self.frame.size.height-f_circle)/2.0
+        var f_x: CGFloat = ((self.frame.size.width-f_all_width)/2.0) + 5, f_y: CGFloat = (self.frame.size.height-f_circle)/2.0
         
         f_start_point = f_x
         
