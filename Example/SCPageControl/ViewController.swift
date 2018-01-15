@@ -93,6 +93,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         //## Style SCJAMoveCircle ##
         SCP_SCJAMoveCircle.frame = CGRect(x: 0, y: screenHeight-100, width: screenWidth, height: 50)
         SCP_SCJAMoveCircle.scp_style = .SCJAMoveCircle
+//        SCP_SCJAMoveCircle.isCircle = false //Not use circle
         SCP_SCJAMoveCircle.set_view(Int(sc_main.contentSize.width/screenWidth), current: 0, tint_color: .orange)
         
         //## Style SCJAFillCircle ##

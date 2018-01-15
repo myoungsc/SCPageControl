@@ -17,7 +17,7 @@ class SCP_SCJAMoveCircle: UIView {
     
     var numberOfPage: Int = 0, currentOfPage: Int = 0
     var f_start_point: CGFloat = 0.0, f_start: CGFloat = 0.0
-    
+    var isCircle: Bool = true
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder:aDecoder)!
@@ -32,10 +32,11 @@ class SCP_SCJAMoveCircle: UIView {
     }
     
     // ## view init method ##
-    func set_view(_ page: Int, current: Int, tint_color: UIColor) {
+    func set_view(_ page: Int, current: Int, tint_color: UIColor, isCircleOption: Bool) {
         
         numberOfPage = page
         currentOfPage = current
+        isCircle = isCircleOption
         
         let f_all_width: CGFloat = CGFloat(numberOfPage*20)
         
@@ -44,13 +45,15 @@ class SCP_SCJAMoveCircle: UIView {
             return
         }
         
-        img_focus.frame = CGRect(x: 0, y: 0, width: circle_size, height: circle_size)
-        img_focus.center = self.center
-        img_focus.layer.cornerRadius = img_focus.frame.size.height/2.0
-        img_focus.layer.borderColor = tint_color.cgColor
-        img_focus.layer.borderWidth = 1.0
-        img_focus.backgroundColor = .clear
-        self.addSubview(img_focus)
+        if isCircle {
+            img_focus.frame = CGRect(x: 0, y: 0, width: circle_size, height: circle_size)
+            img_focus.center = self.center
+            img_focus.layer.cornerRadius = img_focus.frame.size.height/2.0
+            img_focus.layer.borderColor = tint_color.cgColor
+            img_focus.layer.borderWidth = 1.0
+            img_focus.backgroundColor = .clear
+            self.addSubview(img_focus)
+        }
         
         let f_width: CGFloat = 10.0, f_height: CGFloat = 10.0
         var f_x: CGFloat = (self.center.x-(f_width/2.0)), f_y: CGFloat = (self.frame.size.height-f_height)/2.0

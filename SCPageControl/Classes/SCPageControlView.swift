@@ -21,10 +21,12 @@ import UIKit
     var screenHeight : CGFloat = UIScreen.main.bounds.size.height
     
     public var scp_style: SCPageStyle = .SCNormal
+    public var isCircle: Bool = true
     
     var numberOfPage: Int = 0, currentOfPage: Int = 0
     var f_start_point: CGFloat = 0.0, f_start: CGFloat = 0.0
-        
+   
+    
     public required init(coder aDecoder: NSCoder) {
         super.init(coder:aDecoder)!
     }
@@ -44,7 +46,7 @@ import UIKit
         case .SCJAMoveCircle:
             let scp_scjamovecircle = SCP_SCJAMoveCircle(frame: viewFrame)
             scp_scjamovecircle.tag = scp_style.rawValue
-            scp_scjamovecircle.set_view(page, current: current, tint_color: tint_color)
+            scp_scjamovecircle.set_view(page, current: current, tint_color: tint_color, isCircleOption: isCircle)
             self.addSubview(scp_scjamovecircle)
         case .SCJAFillCircle:
             let scp_scjafillcircle = SCP_SCJAFillCircle(frame: viewFrame)
