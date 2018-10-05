@@ -112,9 +112,9 @@ import UIKit
         var viewFrame = self.bounds
         if self.constraints.count != 0 { viewFrame.size.width = screenWidth }
         for element in self.constraints {
-            if element.firstAttribute == NSLayoutAttribute.height {
+            if element.firstAttribute == NSLayoutConstraint.Attribute.height {
                 viewFrame.size.height = element.constant
-            } else if element.firstAttribute == NSLayoutAttribute.width {
+            } else if element.firstAttribute == NSLayoutConstraint.Attribute.width {
                 viewFrame.size.width = element.constant
             }
         }

@@ -35,7 +35,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         NotificationCenter.default.addObserver(
             self,
             selector:  #selector(deviceDidRotate),
-            name: .UIDeviceOrientationDidChange,
+            name: UIDevice.orientationDidChangeNotification,
             object: nil
         )        
         init_view()
