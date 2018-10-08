@@ -12,8 +12,8 @@ Scrolling A page control that moves in sync with the page movement distance.
 
 ## Requirements
 ```
-* Swift 3.0.1
-* XCode 8.3.1
+* Swift 4.2
+* XCode 10
 * iOS 9.0 (Min SDK)
 * Not Use Autolayout
 ```
@@ -23,8 +23,11 @@ SCPageControl is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-//Swift 4.0
+//Swift 4.2
 pod "SCPageControl"
+
+//Swift 4.0
+pod "SCPageControl", '-> 0.2.1'
 
 //Swift 3.0
 pod "SCPageControl", '~> 0.1.3'
