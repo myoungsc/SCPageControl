@@ -71,17 +71,21 @@ import UIKit
         let viewFrame = calculateViewRealSize()
         switch scp_style {
         case .SCJAMoveCircle:
-            let scp_scjamovecircle = self.viewWithTag(scp_style.rawValue) as! SCP_SCJAMoveCircle
-            scp_scjamovecircle.set_rotateDevice(viewFrame)
+            if let scp_scjamovecircle = self.viewWithTag(scp_style.rawValue) as? SCP_SCJAMoveCircle {
+                scp_scjamovecircle.set_rotateDevice(viewFrame)
+            }
         case .SCJAFillCircle:
-            let scp_scjafillcircle = self.viewWithTag(scp_style.rawValue) as! SCP_SCJAFillCircle
-            scp_scjafillcircle.set_rotateDevice(viewFrame)
+            if let scp_scjafillcircle = self.viewWithTag(scp_style.rawValue) as? SCP_SCJAFillCircle {
+                scp_scjafillcircle.set_rotateDevice(viewFrame)
+            }
         case .SCJAFlatBar:
-            let scp_scjaflatbar = self.viewWithTag(scp_style.rawValue) as! SCP_SCJAFlatBar
-            scp_scjaflatbar.set_rotateDevice(viewFrame)
+            if let scp_scjaflatbar = self.viewWithTag(scp_style.rawValue) as? SCP_SCJAFlatBar {
+                scp_scjaflatbar.set_rotateDevice(viewFrame)
+            }
         default: //.SCNormal
-            let scp_normal = self.viewWithTag(scp_style.rawValue) as! SCP_SCNormal
-            scp_normal.set_rotateDevice(viewFrame)
+            if let scp_normal = self.viewWithTag(scp_style.rawValue) as? SCP_SCNormal {
+                scp_normal.set_rotateDevice(viewFrame)
+            }
         }
     }
     

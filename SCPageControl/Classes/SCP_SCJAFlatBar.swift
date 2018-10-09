@@ -2,7 +2,7 @@
 //  SCP_SCFlatBar.swift
 //  Pods
 //
-//  Created by 명수창 on 2017. 5. 2..
+//  Created by Myoung on 2017. 5. 2..
 //
 //
 

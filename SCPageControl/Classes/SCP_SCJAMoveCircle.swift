@@ -2,7 +2,7 @@
 //  SCP_SCJAMoveCircle.swift
 //  Pods
 //
-//  Created by 명수창 on 2017. 4. 30..
+//  Created by Myoung on 2017. 4. 30..
 //
 //
 

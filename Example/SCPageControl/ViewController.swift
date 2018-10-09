@@ -80,11 +80,13 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             sc_main.addSubview(lb_title)
         }
                 
-        //## SCPageControlView Setting Value ##
-        //set_view Function
-        //First parameter is Page Count
-        //Seconde Parameter is Start Page
-        //Third Parameter is PageControl tint_Color
+        /***
+        ## SCPageControlView Setting Value ##
+         - set_view Function
+         - First parameter is Page Count
+         - Seconde Parameter is Start Page
+         - Third Parameter is PageControl tint_Color
+        */
         //## Style SCNormal ##
         ScPageControl.frame = CGRect(x: 0, y: screenHeight-50, width: screenWidth, height: 50)
         ScPageControl.scp_style = .SCNormal

@@ -2,7 +2,7 @@
 //  SCP_SCFillCircle.swift
 //  Pods
 //
-//  Created by 명수창 on 2017. 5. 1..
+//  Created by Myoung on 2017. 5. 1..
 //
 //
 
