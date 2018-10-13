@@ -32,7 +32,7 @@ class SCP_SCJAMoveCircle: UIView {
     }
     
     // ## view init method ##
-    func set_view(_ page: Int, current: Int, tint_color: UIColor, isCircleOption: Bool) {
+    func set_view(_ page: Int, current: Int, current_color: UIColor, disable_color: UIColor?, isCircleOption: Bool) {
         
         numberOfPage = page
         currentOfPage = current
@@ -49,7 +49,7 @@ class SCP_SCJAMoveCircle: UIView {
             img_focus.frame = CGRect(x: 0, y: 0, width: circle_size, height: circle_size)
             img_focus.center = self.center
             img_focus.layer.cornerRadius = img_focus.frame.size.height/2.0
-            img_focus.layer.borderColor = tint_color.cgColor
+            img_focus.layer.borderColor = current_color.cgColor
             img_focus.layer.borderWidth = 1.0
             img_focus.backgroundColor = .clear
             self.addSubview(img_focus)
@@ -77,7 +77,7 @@ class SCP_SCJAMoveCircle: UIView {
             }
             img_page.frame = CGRect(x: f_x, y: f_y, width: f_width, height: f_height)
             img_page.layer.cornerRadius = img_page.frame.size.height/2.0
-            img_page.backgroundColor = tint_color
+            img_page.backgroundColor = current_color
             img_page.tag = i+10
             view_img.addSubview(img_page)
             

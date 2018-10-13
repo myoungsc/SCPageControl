@@ -27,7 +27,7 @@ class SCP_SCJAFillCircle: UIView {
     }
     
     // ## view init method ##
-    func set_view(_ page: Int, current: Int, tint_color: UIColor) {
+    func set_view(_ page: Int, current: Int, current_color: UIColor, disable_color: UIColor?) {
         
         numberOfPage = page
         currentOfPage = current
@@ -46,7 +46,7 @@ class SCP_SCJAFillCircle: UIView {
         
         for i in 0 ..< numberOfPage {
             let img_page = UIImageView()
-            img_page.layer.borderColor = tint_color.cgColor
+            img_page.layer.borderColor = current_color.cgColor
             img_page.frame = CGRect(x: f_x, y: f_y, width: f_circle, height: f_circle)
             img_page.layer.cornerRadius = img_page.frame.size.height/2.0
             img_page.tag = i+10

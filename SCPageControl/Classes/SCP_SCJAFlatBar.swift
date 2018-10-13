@@ -28,7 +28,7 @@ class SCP_SCJAFlatBar: UIView {
     }
 
     // ## view init method ##
-    func set_view(_ page: Int, current: Int, tint_color: UIColor) {
+    func set_view(_ page: Int, current: Int, current_color: UIColor, disable_color: UIColor?) {
         
         numberOfPage = page
         currentOfPage = current
@@ -48,7 +48,7 @@ class SCP_SCJAFlatBar: UIView {
         
         for i in 0 ..< numberOfPage {
             let img_page = UIImageView(frame: CGRect(x: f_x, y: f_y, width: f_width, height: f_height))
-            img_page.backgroundColor = tint_color
+            img_page.backgroundColor = current_color
             img_page.alpha = 0.2
             img_page.layer.cornerRadius = img_page.frame.size.height/2.0
             img_page.tag = i+10
@@ -64,7 +64,7 @@ class SCP_SCJAFlatBar: UIView {
         f_last_x = f_move_x
        
         img_move.frame = CGRect(x: f_move_x, y: f_y, width: f_width, height: f_height)
-        img_move.backgroundColor = tint_color
+        img_move.backgroundColor = current_color
         img_move.layer.cornerRadius = img_move.frame.size.height/2.0
         img_move.tag = 5
         self.addSubview(img_move)

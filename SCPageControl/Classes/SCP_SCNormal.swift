@@ -16,6 +16,9 @@ class SCP_SCNormal: UIView {
     var screenWidth : CGFloat = UIScreen.main.bounds.size.width
     var screenHeight : CGFloat = UIScreen.main.bounds.size.height
     
+    var currentColor = UIColor.red
+    var disableColor: UIColor?
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder:aDecoder)!
     }
@@ -29,10 +32,12 @@ class SCP_SCNormal: UIView {
     }
     
     // ## view init method ##
-    func set_view(_ page: Int, current: Int, tint_color: UIColor) {
-               
+    func set_view(_ page: Int, current: Int, current_color: UIColor, disable_color: UIColor?) {
+        
         numberOfPage = page
         currentOfPage = current
+        currentColor = current_color
+        disableColor = disable_color
         
         let f_all_width: CGFloat = CGFloat((numberOfPage-1)*20 + 25)
         
@@ -52,13 +57,20 @@ class SCP_SCNormal: UIView {
             if i == currentOfPage {
                 f_width = 25.0
                 img_page.alpha = 1.0
+                img_page.backgroundColor = currentColor
+                
             } else {
                 f_width = 10.0
                 img_page.alpha = 0.4
-            }
+                if disableColor != nil {
+                    img_page.backgroundColor = disableColor
+                } else {
+                    img_page.backgroundColor = currentColor
+                }                
+            }            
+            
             img_page.frame = CGRect(x: f_x, y: f_y, width: f_width, height: f_height)
             img_page.layer.cornerRadius = img_page.frame.size.height/2.0
-            img_page.backgroundColor = tint_color
             img_page.tag = i+10
             self.addSubview(img_page)
             
@@ -93,6 +105,16 @@ class SCP_SCNormal: UIView {
                                             width: 10-(f_move+((CGFloat(tag_value)-10)*15)),
                                             height: iv_page_next.frame.size.height)
                 iv_page_next.alpha = 0.4+f_alpha
+                
+                print(0.4+f_alpha)
+                
+                if disableColor != nil {
+                    if f_alpha+0.4 > 0.95  {
+                        iv_page_next.backgroundColor = currentColor
+                        iv_page.backgroundColor = disableColor
+                    }
+                }
+                
             }
         }
     }
