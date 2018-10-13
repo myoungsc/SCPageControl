@@ -80,7 +80,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             sc_main.addSubview(lb_title)
         }
                 
-        /***
+        /**
         ## SCPageControlView Setting Value ##
          - set_view Function
          - First parameter is Page Count
@@ -90,23 +90,23 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         //## Style SCNormal ##
         ScPageControl.frame = CGRect(x: 0, y: screenHeight-50, width: screenWidth, height: 50)
         ScPageControl.scp_style = .SCNormal
-        ScPageControl.set_view(Int(sc_main.contentSize.width/screenWidth), current: 0, tint_color: .red)
+        ScPageControl.set_view(Int(sc_main.contentSize.width/screenWidth), current: 0, current_color: .red, disable_color: .gray)
         
         //## Style SCJAMoveCircle ##
         SCP_SCJAMoveCircle.frame = CGRect(x: 0, y: screenHeight-100, width: screenWidth, height: 50)
         SCP_SCJAMoveCircle.scp_style = .SCJAMoveCircle
 //        SCP_SCJAMoveCircle.isCircle = false //Not use circle
-        SCP_SCJAMoveCircle.set_view(Int(sc_main.contentSize.width/screenWidth), current: 0, tint_color: .orange)
+        SCP_SCJAMoveCircle.set_view(Int(sc_main.contentSize.width/screenWidth), current: 0, current_color: .orange, disable_color: nil)
         
         //## Style SCJAFillCircle ##
         SCP_SCJAFillCircle.frame = CGRect(x: 0, y: screenHeight-150, width: screenWidth, height: 50)
         SCP_SCJAFillCircle.scp_style = .SCJAFillCircle
-        SCP_SCJAFillCircle.set_view(Int(sc_main.contentSize.width/screenWidth), current: 0, tint_color: .green)
+        SCP_SCJAFillCircle.set_view(Int(sc_main.contentSize.width/screenWidth), current: 0, current_color: .green, disable_color: nil)
         
         //## Style SCJAFlatBar ##
         SCP_SCJAFlatBar.frame = CGRect(x: 0, y: screenHeight-200, width: screenWidth, height: 50)
         SCP_SCJAFlatBar.scp_style = .SCJAFlatBar
-        SCP_SCJAFlatBar.set_view(Int(sc_main.contentSize.width/screenWidth), current: 0, tint_color: .blue)
+        SCP_SCJAFlatBar.set_view(Int(sc_main.contentSize.width/screenWidth), current: 0, current_color: .blue, disable_color: nil)
     }
     
     //MARK: ## ScrollView Delegate ##
