@@ -80,7 +80,7 @@ class SCP_SCNormal: UIView {
     
     // ## Call the move page in scrollView ##
     func scroll_did(_ scrollView: UIScrollView) {
-        
+     
         let f_page = scrollView.contentOffset.x / scrollView.frame.size.width
         
         let tag_value = get_imgView_tag(f_page)+10
@@ -88,6 +88,12 @@ class SCP_SCNormal: UIView {
         
         let f_move: CGFloat = (15*(f_start-scrollView.contentOffset.x)/scrollView.frame.size.width)
         let f_alpha: CGFloat = (0.6*(scrollView.contentOffset.x-f_next_start)/scrollView.frame.size.width)
+                
+        if f_page == 0.0 {
+            if let iv_page: UIImageView = self.viewWithTag(10) as? UIImageView, disableColor != nil { //0.3.1 Add disable color
+                iv_page.backgroundColor = currentColor
+            }            
+        }
         
         if let iv_page: UIImageView = self.viewWithTag(tag_value) as? UIImageView,
             tag_value >= 10 && tag_value+1 < 10+numberOfPage {
@@ -98,6 +104,10 @@ class SCP_SCNormal: UIView {
                                    height: iv_page.frame.size.height)
             iv_page.alpha = 1-f_alpha
             
+            if 1-f_alpha < 0.42 && disableColor != nil { //0.3.1 Add disable color
+                iv_page.backgroundColor = disableColor
+            }
+            
             if let iv_page_next: UIImageView = self.viewWithTag(tag_value+1) as? UIImageView {
                 let f_page_next_x: CGFloat = ((f_start_point+35)+((CGFloat(tag_value)-10)*20))
                 iv_page_next.frame = CGRect(x: f_page_next_x+(f_move+((CGFloat(tag_value)-10)*15)),
@@ -106,15 +116,13 @@ class SCP_SCNormal: UIView {
                                             height: iv_page_next.frame.size.height)
                 iv_page_next.alpha = 0.4+f_alpha
                 
-                print(0.4+f_alpha)
-                
-                if disableColor != nil {
-                    if f_alpha+0.4 > 0.95  {
+                if disableColor != nil { //0.3.1 Add disable color
+                    if 0.98 < f_alpha+0.4  {
                         iv_page_next.backgroundColor = currentColor
-                        iv_page.backgroundColor = disableColor
-                    }
+                    } else {
+                        iv_page_next.backgroundColor = disableColor
+                    }                    
                 }
-                
             }
         }
     }

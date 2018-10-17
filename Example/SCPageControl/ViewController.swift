@@ -90,7 +90,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         //## Style SCNormal ##
         ScPageControl.frame = CGRect(x: 0, y: screenHeight-50, width: screenWidth, height: 50)
         ScPageControl.scp_style = .SCNormal
-        ScPageControl.set_view(Int(sc_main.contentSize.width/screenWidth), current: 0, current_color: .red, disable_color: .gray)
+        ScPageControl.set_view(Int(sc_main.contentSize.width/screenWidth), current: 0, current_color: .red, disable_color: nil)
+        //disable_color is dot background color that current not focus
+//        ScPageControl.set_view(Int(sc_main.contentSize.width/screenWidth), current: 0, current_color: .red, disable_color: .gray)
         
         //## Style SCJAMoveCircle ##
         SCP_SCJAMoveCircle.frame = CGRect(x: 0, y: screenHeight-100, width: screenWidth, height: 50)

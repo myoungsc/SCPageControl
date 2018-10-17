@@ -43,12 +43,12 @@
 /* Begin PBXFileReference section */
 		02D3515FA8B36AA5DB4E815A2388BC4F /* SCP_SCJAMoveCircle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCP_SCJAMoveCircle.swift; path = SCPageControl/Classes/SCP_SCJAMoveCircle.swift; sourceTree = "<group>"; };
 		0C70F9FC2FF41DA65647310A1E133A95 /* Pods-SCPageControl_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SCPageControl_Tests-dummy.m"; sourceTree = "<group>"; };
-		118047BB2E252ED44AA6A76FDA961701 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		12D703308C51A2310A05BC5D60B6B044 /* SCPageControl.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SCPageControl.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		118047BB2E252ED44AA6A76FDA961701 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		12D703308C51A2310A05BC5D60B6B044 /* SCPageControl.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = SCPageControl.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1E8595B53034AAFA4F1C81643DE08C9F /* Pods-SCPageControl_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SCPageControl_Example.release.xcconfig"; sourceTree = "<group>"; };
 		1F901B1893D0C89F41D4627C5F192A6A /* SCPageControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCPageControl-umbrella.h"; sourceTree = "<group>"; };
 		25553715752412CB31A42ED2067CFB4A /* SCP_SCNormal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCP_SCNormal.swift; path = SCPageControl/Classes/SCP_SCNormal.swift; sourceTree = "<group>"; };
-		25F8042A62DE9A688298FD9B5D9CB7EF /* Pods_SCPageControl_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SCPageControl_Tests.framework; path = "Pods-SCPageControl_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25F8042A62DE9A688298FD9B5D9CB7EF /* Pods_SCPageControl_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SCPageControl_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2935788AD63E400E716ACDE8B65D0B0D /* Pods-SCPageControl_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SCPageControl_Example-frameworks.sh"; sourceTree = "<group>"; };
 		2EA9192AEB3FE6C11AA47C4CB90541A9 /* SCPageControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCPageControl.xcconfig; sourceTree = "<group>"; };
 		3983C7211D0D0EB763E1D5DAA11D72D0 /* Pods-SCPageControl_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SCPageControl_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -58,12 +58,12 @@
 		51E24D109672F70CD964AF5EE3AF52C6 /* Pods-SCPageControl_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SCPageControl_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6266A4CF6BC231CBD896DE9991322118 /* Pods-SCPageControl_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SCPageControl_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		79F5C9E4FC0D55E51CFD10AEAC939486 /* SCPageControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SCPageControl.framework; path = SCPageControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79F5C9E4FC0D55E51CFD10AEAC939486 /* SCPageControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SCPageControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FAB424E2343823349FA920F16431CF9 /* Pods-SCPageControl_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SCPageControl_Example-Info.plist"; sourceTree = "<group>"; };
-		8620DCBE0DAEBB6B36EB363C814202B7 /* Pods_SCPageControl_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SCPageControl_Example.framework; path = "Pods-SCPageControl_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8620DCBE0DAEBB6B36EB363C814202B7 /* Pods_SCPageControl_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SCPageControl_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89DBB53B2F21DBA72DE5A39BA9C1FF1D /* Pods-SCPageControl_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SCPageControl_Example-dummy.m"; sourceTree = "<group>"; };
-		8EB2FB0C235479AC9610FB7703F1AC5C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8EB2FB0C235479AC9610FB7703F1AC5C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A938E0190DA39CE0DE26CEC1A4DD9714 /* SCPageControl-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SCPageControl-Info.plist"; sourceTree = "<group>"; };
 		AB7810A8877F85DB728050166433755F /* Pods-SCPageControl_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SCPageControl_Example.modulemap"; sourceTree = "<group>"; };
 		C4894660B43F810C605F944371D2CDD7 /* Pods-SCPageControl_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SCPageControl_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -326,7 +326,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1000;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -446,8 +446,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -641,6 +640,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
@@ -669,8 +669,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -756,7 +755,7 @@
 				C4EAA84F44D044E108500A81C635F21E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		63E25114EE4F37ADF3D2B9512FB39B91 /* Build configuration list for PBXNativeTarget "Pods-SCPageControl_Example" */ = {
 			isa = XCConfigurationList;
@@ -765,7 +764,7 @@
 				05C87151583534C61EB873246378A938 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		83101C2B8B3E93FFA7CE20D7405775F6 /* Build configuration list for PBXNativeTarget "SCPageControl" */ = {
 			isa = XCConfigurationList;
@@ -774,7 +773,7 @@
 				CE82AE14771E758607A82907FEDF7639 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		E8DAE650A13BBB44CC6959C5BB8A0FBF /* Build configuration list for PBXNativeTarget "Pods-SCPageControl_Tests" */ = {
 			isa = XCConfigurationList;
@@ -783,7 +782,7 @@
 				F4008CEC80653C72524C34B2E4501E81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
