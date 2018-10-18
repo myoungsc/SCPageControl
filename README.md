@@ -7,6 +7,11 @@
 ## Description
 Scrolling A page control that moves in sync with the page movement distance.
 
+#### Next Update Todo
+
+ - [ ] Apply disable_color another design.
+
+
 ## ScreenShot
 ![](https://github.com/myoungsc/SCPageControl/blob/master/ScreenShot/SCPageControl.gif)
 
@@ -55,7 +60,11 @@ override func viewDidLoad() {
 
 	sc.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height-50, width: UIScreen.main.bounds.size.width, height: 50)
 	sc.scp_style = .SCNormal
-	sc.set_view(5, current: 0, tint_color: UIColor.red)
+	sc.set_view(5, current: 0, current_color: .red, disable_color: nil)
+    /**
+     disable_color is dot background color that current not focus
+	 */
+    //ScPageControl.set_view(5, current: 0, current_color: .red, disable_color: .gray)
 	view.addSubview(sc)
 }
 
