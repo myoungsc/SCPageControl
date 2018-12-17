@@ -40,28 +40,28 @@ import UIKit
     }
     
     //MARK: ## view init method ##
-    public func set_view(_ page: Int, current: Int, current_color: UIColor, disable_color: UIColor?) {
+    public func set_view(_ page: Int, current: Int, current_color: UIColor) {
         let viewFrame = calculateViewRealSize()
         switch scp_style {
         case .SCJAMoveCircle:
             let scp_scjamovecircle = SCP_SCJAMoveCircle(frame: viewFrame)
             scp_scjamovecircle.tag = scp_style.rawValue
-            scp_scjamovecircle.set_view(page, current: current, current_color: current_color, disable_color: disable_color, isCircleOption: isCircle)
+            scp_scjamovecircle.set_view(page, current: current, current_color: current_color, isCircleOption: isCircle)
             self.addSubview(scp_scjamovecircle)
         case .SCJAFillCircle:
             let scp_scjafillcircle = SCP_SCJAFillCircle(frame: viewFrame)
             scp_scjafillcircle.tag = scp_style.rawValue
-            scp_scjafillcircle.set_view(page, current: current, current_color: current_color, disable_color: disable_color)
+            scp_scjafillcircle.set_view(page, current: current, current_color: current_color)
             self.addSubview(scp_scjafillcircle)
         case .SCJAFlatBar:
             let scp_scjaflatbar = SCP_SCJAFlatBar(frame: viewFrame)
             scp_scjaflatbar.tag = scp_style.rawValue
-            scp_scjaflatbar.set_view(page, current: current, current_color: current_color, disable_color: disable_color)
+            scp_scjaflatbar.set_view(page, current: current, current_color: current_color)
             self.addSubview(scp_scjaflatbar)
         default: //.SCNormal
             let scp_normal = SCP_SCNormal(frame: viewFrame)
             scp_normal.tag = scp_style.rawValue
-            scp_normal.set_view(page, current: current, current_color: current_color, disable_color: disable_color)
+            scp_normal.set_view(page, current: current, current_color: current_color)
             self.addSubview(scp_normal)
         }
     }

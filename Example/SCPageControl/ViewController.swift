@@ -90,25 +90,23 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         //## Style SCNormal ##
         ScPageControl.frame = CGRect(x: 0, y: screenHeight-50, width: screenWidth, height: 50)
         ScPageControl.scp_style = .SCNormal
-        ScPageControl.set_view(Int(sc_main.contentSize.width/screenWidth), current: 0, current_color: .red, disable_color: nil)
-        //disable_color is dot background color that current not focus
-//        ScPageControl.set_view(Int(sc_main.contentSize.width/screenWidth), current: 0, current_color: .red, disable_color: .gray)
+        ScPageControl.set_view(Int(sc_main.contentSize.width/screenWidth), current: 0, current_color: .red)
         
         //## Style SCJAMoveCircle ##
         SCP_SCJAMoveCircle.frame = CGRect(x: 0, y: screenHeight-100, width: screenWidth, height: 50)
         SCP_SCJAMoveCircle.scp_style = .SCJAMoveCircle
 //        SCP_SCJAMoveCircle.isCircle = false //Not use circle
-        SCP_SCJAMoveCircle.set_view(Int(sc_main.contentSize.width/screenWidth), current: 0, current_color: .orange, disable_color: nil)
+        SCP_SCJAMoveCircle.set_view(Int(sc_main.contentSize.width/screenWidth), current: 0, current_color: .orange)
         
         //## Style SCJAFillCircle ##
         SCP_SCJAFillCircle.frame = CGRect(x: 0, y: screenHeight-150, width: screenWidth, height: 50)
         SCP_SCJAFillCircle.scp_style = .SCJAFillCircle
-        SCP_SCJAFillCircle.set_view(Int(sc_main.contentSize.width/screenWidth), current: 0, current_color: .green, disable_color: nil)
+        SCP_SCJAFillCircle.set_view(Int(sc_main.contentSize.width/screenWidth), current: 0, current_color: .green)
         
         //## Style SCJAFlatBar ##
         SCP_SCJAFlatBar.frame = CGRect(x: 0, y: screenHeight-200, width: screenWidth, height: 50)
         SCP_SCJAFlatBar.scp_style = .SCJAFlatBar
-        SCP_SCJAFlatBar.set_view(Int(sc_main.contentSize.width/screenWidth), current: 0, current_color: .blue, disable_color: nil)
+        SCP_SCJAFlatBar.set_view(Int(sc_main.contentSize.width/screenWidth), current: 0, current_color: .blue)
     }
     
     //MARK: ## ScrollView Delegate ##

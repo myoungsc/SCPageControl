@@ -32,7 +32,7 @@ class SCP_SCJAMoveCircle: UIView {
     }
     
     // ## view init method ##
-    func set_view(_ page: Int, current: Int, current_color: UIColor, disable_color: UIColor?, isCircleOption: Bool) {
+    func set_view(_ page: Int, current: Int, current_color: UIColor, isCircleOption: Bool) {
         
         numberOfPage = page
         currentOfPage = current
@@ -69,7 +69,6 @@ class SCP_SCJAMoveCircle: UIView {
         
         for i in 0 ..< numberOfPage {
             let img_page = UIImageView()
-            
             if i == currentOfPage {
                 img_page.alpha = 1.0
             } else {

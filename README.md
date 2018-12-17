@@ -9,7 +9,7 @@ Scrolling A page control that moves in sync with the page movement distance.
 
 #### Next Update Todo
 
- - [ ] Apply disable_color another design.
+ - [x] <del>Apply disable_color another design.</del> disable_color is not beautiful
 
 
 ## ScreenShot
