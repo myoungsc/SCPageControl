@@ -41,6 +41,7 @@ import UIKit
     
     //MARK: ## view init method ##
     public func set_view(_ page: Int, current: Int, current_color: UIColor, disable_color: UIColor?) {
+        
         let viewFrame = calculateViewRealSize()
         switch scp_style {
         case .SCJAMoveCircle:
