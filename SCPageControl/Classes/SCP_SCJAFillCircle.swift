@@ -27,7 +27,7 @@ class SCP_SCJAFillCircle: UIView {
     }
     
     // ## view init method ##
-    func set_view(_ page: Int, current: Int, current_color: UIColor, disable_color: UIColor?) {
+    func set_view(_ page: Int, current: Int, current_color: UIColor) {
         
         numberOfPage = page
         currentOfPage = current

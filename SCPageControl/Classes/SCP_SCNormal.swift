@@ -16,9 +16,6 @@ class SCP_SCNormal: UIView {
     var screenWidth : CGFloat = UIScreen.main.bounds.size.width
     var screenHeight : CGFloat = UIScreen.main.bounds.size.height
     
-    var currentColor = UIColor.red
-    var disableColor: UIColor?
-    
     required init(coder aDecoder: NSCoder) {
         super.init(coder:aDecoder)!
     }
@@ -32,12 +29,10 @@ class SCP_SCNormal: UIView {
     }
     
     // ## view init method ##
-    func set_view(_ page: Int, current: Int, current_color: UIColor, disable_color: UIColor?) {
+    func set_view(_ page: Int, current: Int, current_color: UIColor) {
         
         numberOfPage = page
         currentOfPage = current
-        currentColor = current_color
-        disableColor = disable_color
         
         let f_all_width: CGFloat = CGFloat((numberOfPage-1)*20 + 25)
         
@@ -57,20 +52,14 @@ class SCP_SCNormal: UIView {
             if i == currentOfPage {
                 f_width = 25.0
                 img_page.alpha = 1.0
-                img_page.backgroundColor = currentColor
-                
             } else {
                 f_width = 10.0
                 img_page.alpha = 0.4
-                if disableColor != nil {
-                    img_page.backgroundColor = disableColor
-                } else {
-                    img_page.backgroundColor = currentColor
-                }                
             }            
             
             img_page.frame = CGRect(x: f_x, y: f_y, width: f_width, height: f_height)
             img_page.layer.cornerRadius = img_page.frame.size.height/2.0
+            img_page.backgroundColor = current_color
             img_page.tag = i+10
             self.addSubview(img_page)
             
@@ -88,13 +77,7 @@ class SCP_SCNormal: UIView {
         
         let f_move: CGFloat = (15*(f_start-scrollView.contentOffset.x)/scrollView.frame.size.width)
         let f_alpha: CGFloat = (0.6*(scrollView.contentOffset.x-f_next_start)/scrollView.frame.size.width)
-                
-        if f_page == 0.0 {
-            if let iv_page: UIImageView = self.viewWithTag(10) as? UIImageView, disableColor != nil { //0.3.1 Add disable color
-                iv_page.backgroundColor = currentColor
-            }            
-        }
-        
+                        
         if let iv_page: UIImageView = self.viewWithTag(tag_value) as? UIImageView,
             tag_value >= 10 && tag_value+1 < 10+numberOfPage {
             
@@ -104,10 +87,6 @@ class SCP_SCNormal: UIView {
                                    height: iv_page.frame.size.height)
             iv_page.alpha = 1-f_alpha
             
-            if 1-f_alpha < 0.42 && disableColor != nil { //0.3.1 Add disable color
-                iv_page.backgroundColor = disableColor
-            }
-            
             if let iv_page_next: UIImageView = self.viewWithTag(tag_value+1) as? UIImageView {
                 let f_page_next_x: CGFloat = ((f_start_point+35)+((CGFloat(tag_value)-10)*20))
                 iv_page_next.frame = CGRect(x: f_page_next_x+(f_move+((CGFloat(tag_value)-10)*15)),
@@ -115,14 +94,6 @@ class SCP_SCNormal: UIView {
                                             width: 10-(f_move+((CGFloat(tag_value)-10)*15)),
                                             height: iv_page_next.frame.size.height)
                 iv_page_next.alpha = 0.4+f_alpha
-                
-                if disableColor != nil { //0.3.1 Add disable color
-                    if 0.98 < f_alpha+0.4  {
-                        iv_page_next.backgroundColor = currentColor
-                    } else {
-                        iv_page_next.backgroundColor = disableColor
-                    }                    
-                }
             }
         }
     }
