@@ -514,14 +514,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RM5FE27WRY;
-<<<<<<< HEAD
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/SCPageControl\"",
 				);
-=======
 				HEADER_SEARCH_PATHS = "$(inherited)";
->>>>>>> 69fa8d547aed790efbdd21202ecb6bb465bf278d
 				INFOPLIST_FILE = SCPageControl/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
@@ -541,14 +538,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RM5FE27WRY;
-<<<<<<< HEAD
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/SCPageControl\"",
 				);
-=======
 				HEADER_SEARCH_PATHS = "$(inherited)";
->>>>>>> 69fa8d547aed790efbdd21202ecb6bb465bf278d
 				INFOPLIST_FILE = SCPageControl/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
